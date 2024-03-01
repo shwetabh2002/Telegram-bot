@@ -112,7 +112,7 @@ async function sendLatestWeatherUpdate(chatId, city, country) {
 // below function to handle admin-related actions
 let isAdminAuthenticated = false;
 let passwordAttempts = 0;
-const ADMIN_PASSWORD = 'yups';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD_KEY;
 
 // handling admin commands
 bot.onText(/\/start-admin/, (msg) => {
